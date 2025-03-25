@@ -1,6 +1,33 @@
-@WebApi_HostAddress = http://localhost:5274
+@WebApi_HostAddress = https://localhost:7244
 
-GET {{WebApi_HostAddress}}/weatherforecast/
+GET {{WebApi_HostAddress}}/api/personitems/
 Accept: application/json
+
+###
+
+POST {{WebApi_HostAddress}}/api/personitems
+Content-Type: application/json
+
+{
+  //TodoItem
+}
+
+###
+
+@id=1
+GET {{WebApi_HostAddress}}/api/personitems/{{id}}
+
+###
+
+PUT {{WebApi_HostAddress}}/api/personitems/{{id}}
+Content-Type: application/json
+
+{
+  //TodoItem
+}
+
+###
+
+DELETE {{WebApi_HostAddress}}/api/personitems/{{id}}
 
 ###
