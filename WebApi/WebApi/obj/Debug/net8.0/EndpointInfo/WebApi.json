@@ -242,6 +242,10 @@
             "type": "string",
             "nullable": true
           },
+          "addressId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "address": {
             "$ref": "#/components/schemas/Address"
           },

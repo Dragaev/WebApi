@@ -24,7 +24,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PersonItem>>> GetPersonItems()
         {
-            return await _context.PersonItems.ToListAsync();
+            return await _context.PersonItems.Include(b => b.Address).ToListAsync();
         }
 
         // GET: api/PersonItems/5
